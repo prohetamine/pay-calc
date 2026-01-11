@@ -12,7 +12,7 @@ createAppKit({
   networks: config.networks,
   metadata: {
     name: 'Pay Calc',
-    description: 'Prohetamine example DApp - Pay Calc',
+    description: 'Example DApp with BSC by Prohetamine - Pay Calc',
     url: 'https://mywebsite.com',
     icons: ['https://mywebsite.com/icon.png']
   }
