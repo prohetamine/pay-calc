@@ -11,8 +11,8 @@ createAppKit({
   adapters: [new EthersAdapter()],
   networks: config.networks,
   metadata: {
-    name: 'Pay Calc',
-    description: 'Example DApp with BSC by Prohetamine - Pay Calc',
+    name: 'PayCalc',
+    description: 'Example DApp with BSC by Prohetamine - PayCalc',
     url: 'https://mywebsite.com',
     icons: ['https://mywebsite.com/icon.png']
   }
