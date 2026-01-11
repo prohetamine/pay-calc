@@ -1,1 +1,1 @@
-Pay Calc# pay-calc
+Pay Calc
