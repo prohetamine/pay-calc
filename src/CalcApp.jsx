@@ -301,13 +301,3 @@ const CalcApp = () => {
 }
 
 export default CalcApp
-
-/*
- <button onClick={readContract}>Read Balance</button>
-
-      {
-        balance !== null && (
-          <div>Balance: {balance}</div>
-        )
-      }
-*/
