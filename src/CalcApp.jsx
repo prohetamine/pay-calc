@@ -357,7 +357,7 @@ const CalcApp = () => {
         }}
       >
         <CalcDisplay>
-          <CalcBalance>Balance {balance} PC</CalcBalance>
+          <CalcBalance>Balance {balance} PCL</CalcBalance>
           <CalcPrevResult>{prevInput}</CalcPrevResult>
           <CalcResult>{isCalcing ? '...' : mainInput}</CalcResult>
         </CalcDisplay>
