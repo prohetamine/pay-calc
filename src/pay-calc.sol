@@ -12,7 +12,11 @@ contract PayCalc is ERC20, Ownable {
 
     constructor() ERC20("PayCalc", "PCL") Ownable(msg.sender) {
         _owner = msg.sender;
-        _mint(msg.sender, 1000 * 10**8);
+        _mint(msg.sender, 1000000);
+    }
+
+    function decimals() public pure override returns (uint8) {
+        return 0;
     }
 
     function mint(address to, uint256 amount) external onlyOwner {
