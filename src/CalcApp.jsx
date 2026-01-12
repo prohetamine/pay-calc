@@ -52,6 +52,7 @@ const NavLinks = styled.div`
 const Link = styled(motion.div)`
   margin-left: 10px;
   cursor: pointer;
+  text-decoration: underline;
 `
 
 const CalcWrapper = styled(motion.div)`
