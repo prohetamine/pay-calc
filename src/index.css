@@ -15,10 +15,10 @@ body, html {
   height: 0 !important;
 }
 
-a, a:active {
+.link, .link:active {
   color: #CBDD01;
 }
 
-a:hover {
+.link:hover {
   color: #EAFF00;
 }

@@ -46,10 +46,12 @@ const NavLinks = styled.div`
   font-size: 15px;
   font-family: "SUSE Mono", sans-serif; 
   color: #CBDD01;
+  display: flex;
 `
 
-const Link = styled.a`
+const Link = styled(motion.div)`
   margin-left: 10px;
+  cursor: pointer;
 `
 
 const CalcWrapper = styled(motion.div)`
@@ -281,10 +283,66 @@ const CalcApp = () => {
         }
       </WalletButton>
       <NavLinks>
-        <Link href='https://pancakeswap.finance/swap?chain=bsc&chainOut=bsc&inputCurrency=BNB&outputCurrency=0x2b24FD04c05C74184FB927aba9C3272F83f9Feb1&exactAmount=1000&exactField=OUTPUT' target='_blank'>PancakeSwap</Link>
-        <Link href='https://dexscreener.com/bsc/0x2b24FD04c05C74184FB927aba9C3272F83f9Feb1' target='_blank'>Dexscreener</Link>
-        <Link href='https://bscscan.com/token/0x2b24fd04c05c74184fb927aba9c3272f83f9feb1' target='_blank'>Contract</Link>
-        <Link href='https://github.com/prohetamine/pay-calc' target='_blank'>GitHub</Link>
+        <Link 
+          className='link'
+          drag
+          dragTransition={{
+            bounceStiffness: 100,
+            bounceDamping: 10
+          }}
+          dragSnapToOrigin
+          whileDrag={{
+            scale: 1.05,
+            cursor: 'grab'
+          }}
+          style={{ cursor: 'pointer' }}
+          onClick={() => setTimeout(() => window.open('https://pancakeswap.finance/swap?chain=bsc&chainOut=bsc&inputCurrency=BNB&outputCurrency=0x2b24FD04c05C74184FB927aba9C3272F83f9Feb1&exactAmount=1000&exactField=OUTPUT', '_blank'), 100)}
+        >PancakeSwap</Link>
+        <Link 
+          className='link'
+          drag
+          dragTransition={{
+            bounceStiffness: 100,
+            bounceDamping: 10
+          }}
+          dragSnapToOrigin
+          whileDrag={{
+            scale: 1.05,
+            cursor: 'grab'
+          }}
+          style={{ cursor: 'pointer' }}
+          onClick={() => setTimeout(() => window.open('https://dexscreener.com/bsc/0x2b24FD04c05C74184FB927aba9C3272F83f9Feb1', '_blank'), 100)}
+        >Dexscreener</Link>
+        <Link 
+          className='link'
+          drag
+          dragTransition={{
+            bounceStiffness: 100,
+            bounceDamping: 10
+          }}
+          dragSnapToOrigin
+          whileDrag={{
+            scale: 1.05,
+            cursor: 'grab'
+          }}
+          style={{ cursor: 'pointer' }}
+          onClick={() => setTimeout(() => window.open('https://bscscan.com/token/0x2b24fd04c05c74184fb927aba9c3272f83f9feb1', '_blank'), 100)}
+        >Contract</Link>
+        <Link 
+          className='link'
+          drag
+          dragTransition={{
+            bounceStiffness: 100,
+            bounceDamping: 10
+          }}
+          dragSnapToOrigin
+          whileDrag={{
+            scale: 1.05,
+            cursor: 'grab'
+          }}
+          style={{ cursor: 'pointer' }}
+          onClick={() => setTimeout(() => window.open('https://github.com/prohetamine/pay-calc', '_blank'), 100)}
+        >GitHub</Link>
       </NavLinks>
       <CalcWrapper
         drag
