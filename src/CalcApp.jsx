@@ -9,7 +9,6 @@ import { styled } from 'styled-components'
 import { motion } from 'framer-motion'
 import sleep from 'sleep-promise'
 import config from './config'
-import { a } from 'framer-motion/client'
 
 const Body = styled.div`
   width: 100%;
@@ -81,6 +80,7 @@ const CalcBalance = styled.div`
   font-family: "SUSE Mono", sans-serif;
   overflow-x: scroll;
   width: 250px;
+  text-wrap: nowrap;
 `
 
 const CalcPrevResult = styled.div`
@@ -92,6 +92,7 @@ const CalcPrevResult = styled.div`
   font-family: "SUSE Mono", sans-serif;
   overflow-x: scroll;
   width: 250px;
+  text-wrap: nowrap;
 `
 
 const CalcResult = styled.div`
