@@ -3,7 +3,7 @@ import { bsc } from '@reown/appkit/networks'
 const projectId = '1febfd92481d4ea997711d2ac4a363c0'
     , networks = [bsc]
 
-const contractAddress = '0x662f61b9E9A9C8Faa9cE7C83f7376A8B7E69deB5'
+const contractAddress = '0x2b24FD04c05C74184FB927aba9C3272F83f9Feb1'
 
 const contractABI = [
   'function balanceOf(address owner) view returns (uint256)',
