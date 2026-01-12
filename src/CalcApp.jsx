@@ -124,8 +124,8 @@ const CalcApp = () => {
       , [mainInput, setMainInput] = useState('0')
       , [isCalcing, setIsCalcing] = useState(false)
 
-  const createCallContract = async () => {
-    if (!walletProvider || !address) {
+  const createCallContract = async (isNotConnected = false) => {
+    if ((!walletProvider || !address) && !isNotConnected) {
       open()
       return
     }
@@ -136,8 +136,8 @@ const CalcApp = () => {
     return new Contract(config.contractAddress, config.contractABI, signer)
   }
 
-  const getBalance = async () => {
-    const contract = await createCallContract()
+  const getBalance = async isNotConnected => {
+    const contract = await createCallContract(isNotConnected)
 
     const balance = await contract.balanceOf(address)
     setBalance(balance.toString())
@@ -227,6 +227,14 @@ const CalcApp = () => {
       })
     }
   }
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      getBalance(true)
+    }, 5000)
+
+    return () => clearInterval(intervalId)
+  }, [isConnected, address])
 
   useEffect(() => {
     if (isConnected) {
