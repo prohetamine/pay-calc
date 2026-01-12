@@ -9,6 +9,7 @@ import { styled } from 'styled-components'
 import { motion } from 'framer-motion'
 import sleep from 'sleep-promise'
 import config from './config'
+import { a } from 'framer-motion/client'
 
 const Body = styled.div`
   width: 100%;
@@ -36,6 +37,19 @@ const WalletButton = styled(motion.div)`
   cursor: pointer;
   transform: translate(0px, 0px);
   box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.25);
+`
+
+const NavLinks = styled.div`
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font-size: 15px;
+  font-family: "SUSE Mono", sans-serif; 
+  color: #CBDD01;
+`
+
+const Link = styled.a`
+  margin-left: 10px;
 `
 
 const CalcWrapper = styled(motion.div)`
@@ -261,7 +275,17 @@ const CalcApp = () => {
           transform: 'translate(5px, 5px)',
           boxShadow: '0px 0px 0 0 rgba(0, 0, 0, 0.25)'
         }}
-      >{isConnected ? 'Wallet' : 'Connect wallet'}</WalletButton>
+      >
+        {
+          isConnected ? 'Wallet' : 'Connect wallet'
+        }
+      </WalletButton>
+      <NavLinks>
+        <Link href='https://pancakeswap.finance/swap?chain=bsc&chainOut=bsc&inputCurrency=BNB&outputCurrency=0x2b24FD04c05C74184FB927aba9C3272F83f9Feb1&exactAmount=1000&exactField=OUTPUT' target='_blank'>PancakeSwap</Link>
+        <Link href='https://dexscreener.com/bsc/0x2b24FD04c05C74184FB927aba9C3272F83f9Feb1' target='_blank'>Dexscreener</Link>
+        <Link href='https://bscscan.com/token/0x2b24fd04c05c74184fb927aba9c3272f83f9feb1' target='_blank'>Contract</Link>
+        <Link href='https://github.com/prohetamine/pay-calc' target='_blank'>GitHub</Link>
+      </NavLinks>
       <CalcWrapper
         drag
         dragTransition={{

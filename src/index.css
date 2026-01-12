@@ -14,3 +14,11 @@ body, html {
   width: 0 !important;
   height: 0 !important;
 }
+
+a, a:active {
+  color: #CBDD01;
+}
+
+a:hover {
+  color: #EAFF00;
+}
